@@ -1,0 +1,11 @@
+network:
+  version: 2
+  ethernets:
+    ens10f0:
+      addresses: [10.127.1.1/24]
+      gateway4: 10.127.1.250
+      nameservers:
+        addresses: [10.200.1.11,8.8.8.8]
+    ens10f1: 
+      addresses: [10.127.1.5/24]
+
