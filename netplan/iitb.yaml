@@ -1,0 +1,32 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens10f0:
+      dhcp4: no
+      addresses:
+        - 10.127.1.1/24
+      nameservers:
+        addresses:
+          - 10.200.1.11
+      routes:
+        - to: 0.0.0.0/0
+          via: 10.127.1.250
+          table: 100
+      routing-policy:
+        - from: 10.127.1.1
+          table: 100
+    ens10f1:
+      dhcp4: no
+      addresses:
+        - 10.127.1.5/24
+      nameservers:
+        addresses:
+          - 10.200.1.11
+      routes:
+        - to: 0.0.0.0/0
+          via: 10.127.1.250
+          table: 101
+      routing-policy:
+        - from: 10.127.1.5
+          table: 101
