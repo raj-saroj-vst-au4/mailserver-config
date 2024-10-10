@@ -1,4 +1,4 @@
-global relay
+global relay fixes mail forwarding
 
 /etc/postfix/main.cf >>
 
